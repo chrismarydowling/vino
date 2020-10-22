@@ -14,7 +14,22 @@ function getBottles() {
          colour: "red",
          year: 2012,
          grape: "pinot noir"
+      },
+      {
+         name: "test bottle2",
+         country: "germany",
+         colour: "red",
+         year: 2012,
+         grape: "pinot noir"
+      },
+      {
+         name: "test bottle3",
+         country: "germany",
+         colour: "red",
+         year: 2012,
+         grape: "pinot noir"
       }
+
    ]
    return bottles;
 
@@ -38,7 +53,10 @@ $(document).ready(() => {
    console.log("Bonjour! Je travaille");
    getBottles();
 
-   $("#winerack").append(createBottleDOM(bottles[0]));
+   for (let i=0;i<bottles.length;i++) {
+      $("#winerack").append(createBottleDOM(bottles[i]))
+   }
+
 
 
 })
