@@ -28,6 +28,13 @@ function getBottles() {
          colour: "red",
          year: 2012,
          grape: "pinot noir"
+      },
+      {
+         name: "test bottle4",
+         country: "germany",
+         colour: "red",
+         year: 2012,
+         grape: "pinot noir"
       }
 
    ]
@@ -36,7 +43,10 @@ function getBottles() {
 }
 
 function createBottleDOM(bottle) {
-   return $(`<h2>${bottle.name}</h2>`)
+   
+   return $(`<div class="col-sm">
+      <h2>${bottle.name}</h2>
+   </div>`)
 }
 
 
@@ -51,6 +61,7 @@ function createBottleDOM(bottle) {
 
 $(document).ready(() => {
    console.log("Bonjour! Je travaille");
+   console.log(parseInt(4/3));
    getBottles();
 
    for (let i=0;i<bottles.length;i++) {
