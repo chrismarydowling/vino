@@ -18,14 +18,14 @@ function getBottles() {
       {
          name: "test bottle2",
          country: "germany",
-         colour: "red",
+         colour: "white",
          year: 2012,
          grape: "pinot noir"
       },
       {
          name: "test bottle3",
          country: "germany",
-         colour: "red",
+         colour: "bubbles",
          year: 2012,
          grape: "pinot noir"
       },
@@ -43,20 +43,30 @@ function getBottles() {
 }
 
 function createBottleDOM(bottle) {
-   
+   if (bottle.colour === "white") {
+      return $(`<div class="col-sm">
+      <img alt="White Wine" src="./assets/whiteWine.png"
+         height=150px>
+      </div>`)
+   }
+   else if (bottle.colour === "red") {
+      return $(`<div class="col-sm">
+      <img alt="Red Wine" src="./assets/redWine.png"
+         height=150px>
+      </div>`)
+   }
+   else if (bottle.colour === "bubbles") {
+      return $(`<div class="col-sm">
+      <img alt="Red Wine" src="./assets/bubbles.png"
+         height=150px>
+      </div>`)
+   }
+   else {
    return $(`<div class="col-sm">
-      <h2>${bottle.name}</h2>
+      <h3>${bottle.name}</h3>
    </div>`)
 }
-
-
-
-
-
-
-
-
-
+}
 
 
 $(document).ready(() => {
@@ -67,7 +77,4 @@ $(document).ready(() => {
    for (let i=0;i<bottles.length;i++) {
       $("#winerack").append(createBottleDOM(bottles[i]))
    }
-
-
-
 })
