@@ -1,0 +1,16 @@
+.container {
+  background-color: #402f00;
+}
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, auto));
+  grid-gap: 10px;
+  border: 15px solid ;
+}
+.row > div {
+  background-color: white;
+  padding: 10px;
+}
+#nav {
+   border-bottom: 20px solid transparent;
+}
