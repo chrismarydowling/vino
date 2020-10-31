@@ -9,33 +9,34 @@ function getBottles() {
 
    bottles = [
       {
-         name: "test bottle",
-         country: "germany",
+         name: "yummy vintage wine",
+         country: "french",
          colour: "red",
-         year: 2012,
+         year: 1912,
          grape: "pinot noir"
       },
       {
-         name: "test bottle2",
+         name: "the good stuff",
          country: "germany",
          colour: "white",
-         year: 2012,
-         grape: "pinot noir"
+         year: 2015,
+         grape: "chardonnay"
       },
       {
-         name: "test bottle3",
+         name: "gewurztrayumyum",
          country: "germany",
          colour: "bubbles",
-         year: 2012,
+         year: 2018,
          grape: "pinot noir"
       },
       {
-         name: "test bottle4",
-         country: "germany",
+         name: "another delishus red wine",
+         country: "chile",
          colour: "red",
          year: 2012,
-         grape: "pinot noir"
+         grape: "malbec"
       }
+
 
    ]
    return bottles;
@@ -47,18 +48,63 @@ function createBottleDOM(bottle) {
       return $(`<div class="col-sm">
       <img alt="White Wine" src="./assets/whiteWine.png"
          height=150px>
+         <table style = width 10%>
+           <tr>
+             <th> name </th>
+             <th> country </th>
+             <th> colour  </th>
+             <th> year  </th>
+             <th> grape </th>
+           </tr>
+           <td>${bottle.name}</td>
+           <td>${bottle.country}</td>
+           <td>${bottle.colour}</td>
+           <td>${bottle.year}</td>
+           <td>${bottle.grape}</td>
+          </tr>
+          </table>
       </div>`)
    }
    else if (bottle.colour === "red") {
       return $(`<div class="col-sm">
       <img alt="Red Wine" src="./assets/redWine.png"
          height=150px>
+         <table style = width 100%>
+           <tr>
+             <th> name </th>
+             <th> country </th>
+             <th> colour  </th>
+             <th> year  </th>
+             <th> grape </th>
+           </tr>
+           <td>${bottle.name}</td>
+           <td>${bottle.country}</td>
+           <td>${bottle.colour}</td>
+           <td>${bottle.year}</td>
+           <td>${bottle.grape}</td>
+          </tr>
+          </table>
       </div>`)
    }
    else if (bottle.colour === "bubbles") {
       return $(`<div class="col-sm">
       <img alt="Red Wine" src="./assets/bubbles.png"
          height=150px>
+         <table style = width 100%>
+           <tr>
+             <th> name </th>
+             <th> country </th>
+             <th> colour  </th>
+             <th> year  </th>
+             <th> grape </th>
+           </tr>
+           <td>${bottle.name}</td>
+           <td>${bottle.country}</td>
+           <td>${bottle.colour}</td>
+           <td>${bottle.year}</td>
+           <td>${bottle.grape}</td>
+          </tr>
+          </table>
       </div>`)
    }
    else {
